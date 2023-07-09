@@ -20,3 +20,5 @@ module Blog
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+#gmail_email: "youremail@gmail.com" ME FALTA LA CONFIGURACION DEL CORREO
+#gmail_password: "AKA VA LA CLAVE MALDITA"
