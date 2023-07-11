@@ -60,6 +60,13 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
+    before_action only: [:new, :create] do
+      authorize_request(["author", "admin"])
+    end
+    before_action only: [:edit, :update, :destroy] do
+      authorize_request(["admin"])
+    end
+    
   end
 
   private
